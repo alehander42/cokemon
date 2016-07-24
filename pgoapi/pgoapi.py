@@ -269,7 +269,7 @@ class PGoApi:
                      capture_status = catch_attempt['status']
                      if capture_status == 1:
                          self.log.debug("Caught Pokemon: : %s", catch_attempt)
-                         self.log.info("Caught Pokemon:  %s", self.pokemon_names[str(resp['pokemon_data']['pokemon_id'])])
+                         self.log.info("Gotcha%s", self.pokemon_names[str(resp['pokemon_data']['pokemon_id'])])
                          sleep(2) # If you want to make it faster, delete this line... would not recommend though
                          return catch_attempt
                      elif capture_status != 2:
@@ -295,7 +295,7 @@ class PGoApi:
                 capture_status = catch_attempt['status']
                 if capture_status == 1:
                     self.log.debug("Caught Pokemon: : %s", catch_attempt)
-                    self.log.info("Caught Pokemon:  %s", self.pokemon_names[str(pokemon['pokemon_id'])])
+                    self.log.info("Gotcha%s", self.pokemon_names[str(pokemon['pokemon_id'])])
                     sleep(2) # If you want to make it faster, delete this line... would not recommend though
                     return catch_attempt
                 elif capture_status != 2:
